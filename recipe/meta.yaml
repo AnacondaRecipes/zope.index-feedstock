@@ -11,6 +11,8 @@ source:
   sha256: 99f1e041771add767428b12967c54bdb2152b17df9233d1671efabdfe01f6524
 
 build:
+  # no btrees on s390x
+  skip: True  # [s390x]
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
