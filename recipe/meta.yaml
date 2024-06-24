@@ -37,8 +37,13 @@ test:
     - zope.index
   requires:
     - pip
+    - pytest
   commands:
     - pip check
+    # The tests would normally use zope.testrunner (pip install
+    # zope.testrunner; zope-testrunner --test-path=src) but we can use
+    # pytest --pyargs zope.install to get most of the tests run
+    - pytest --pyargs zope.index
 
 about:
   home: https://github.com/zopefoundation/zope.index
