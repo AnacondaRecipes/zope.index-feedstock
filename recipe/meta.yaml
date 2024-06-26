@@ -28,7 +28,6 @@ requirements:
     - btrees >=4.4.1
     - persistent
     - python
-    - six
     - zope.interface
 
 test:
